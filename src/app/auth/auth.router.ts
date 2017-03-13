@@ -1,19 +1,19 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import {AuthComponent} from "./auth.component";
 import {SignupComponent} from "./signup/signup.component";
 import {SigninComponent} from "./signin/signin.component";
-
+import {RestoreComponent} from "./restore/restore.component";
 
 const routes: Routes = [
-    // {
-    //     path: '',
-    //     redirectTo: 'eager',
-    //     pathMatch: 'full'
-    // },
 
     {
         path: '',
+        component: AuthComponent
+    },
+    {
+        path: 'signin',
         component: SigninComponent
     },
 
@@ -32,4 +32,4 @@ const routes: Routes = [
 
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
+export const routing: ModuleWithProviders = RouterModule.forChild(routes);

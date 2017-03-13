@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+
 import {routing} from './worker.router';
 
 import {WorkerComponent} from "./worker.component";
@@ -11,7 +12,10 @@ import {WorkerComponent} from "./worker.component";
     ],
     declarations: [
         WorkerComponent
-    ]
+    ],
+
+    bootstrap: [WorkerComponent]
+
 })
 export class WorkerModule {
 

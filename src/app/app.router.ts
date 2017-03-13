@@ -1,25 +1,20 @@
 import { ModuleWithProviders } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 
 const routes: Routes = [
-    // {
-    //     path: '',
-    //     redirectTo: 'eager',
-    //     pathMatch: 'full'
-    // },
 
     {
-        path: '/',
-        loadChildren: 'worker/worker.module#WorkerModule'
+        path: '',
+        loadChildren: './worker/worker.module#WorkerModule'
     },
 
+
     {
-        path: 'auth/',
-        loadChildren: 'worker/auth.module#AuthModule'
+        path: 'auth',
+        loadChildren: './auth/auth.module#AuthModule'
     }
 
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules });

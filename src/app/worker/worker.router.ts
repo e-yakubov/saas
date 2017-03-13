@@ -1,10 +1,10 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-// import { LazyComponent } from './lazy.component';
+ import { WorkerComponent } from './worker.component';
 
 const routes: Routes = [
-    // { path: '', component: LazyComponent }
+    { path: '', component: WorkerComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forChild(routes);

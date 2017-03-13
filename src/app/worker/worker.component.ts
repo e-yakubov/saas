@@ -1,14 +1,14 @@
 import {Component} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    templateUrl: './worker.component.html',
+    styleUrls: ['./worker.component.css']
 })
 
 
 export class WorkerComponent {
-
 
     title = 'app works!';
 }
